@@ -1,0 +1,205 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.header{
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.contianer{
+    height: 90%;
+    width: 100%;
+    display: flex;
+}
+
+.left-container{
+    height: 100%;
+    width: 25%;
+    justify-content: center;
+}
+
+.mid-container{
+    background-color: lightcoral;
+    height: 100%;
+    width: 50%;
+}
+
+.right-container{
+    background-color: lightgreen;
+    height: 100%;
+    width: 25%;
+}
+
+.logo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-container svg{
+    margin-top: -10px;
+    margin-left: 0.7rem;
+}
+
+.logo-container h2{
+    margin-left: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+
+}
+
+.sreachbar-container{
+    margin-right: 1rem;
+}
+
+.sreach-create{
+    display: flex;
+}
+
+.profile-container{
+    height: 10%;
+    width: 100%;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-card{
+    height: 100%;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    background-color:rgba(217, 217, 217, 0.3);
+    padding: 0.2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.profile-card:hover {
+    background-color: rgba(217, 217, 217,0.65);  
+    transform: scale(1.05);
+}
+
+.profile-img{
+    height: 80%;
+    border-radius: 1rem;
+    margin-right: 1rem;
+}
+
+.profile-card h3{
+    font-size: 1rem;
+    font-weight: 700;
+
+}
+.profile-card h4{
+    font-size: 0.8rem;
+    font-weight: 700;
+    opacity: 0.8;
+}
+
+
+.nav-container{
+    height: 45%;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-card{
+    margin-top: 2rem;
+    height: 75%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;    
+    justify-content: space-between;  
+    align-items: center;  
+    border-radius: 1rem;
+    background-color:rgba(217, 217, 217, 0.3);
+    padding: 2rem;                 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav-btn-container{
+    width: 100%;
+    font-size: 1.3rem;
+    font-weight: 640;
+    display: flex;    
+    justify-content: left;  
+    align-items: center; 
+    color: rgba(0, 0, 0, 0.75); 
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 1rem;
+    font-size: 1.3rem;
+    font-weight: 640;
+    color: #000000bf; 
+}
+
+.nav-btn-container:hover {  
+    transform: scale(1.05);
+    color: rgba(24, 119, 242,1);
+
+}
+
+.nav-btn-container svg {
+    width: 2rem;
+}
+
+
+.invitaion-container{
+    height: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.invitaion-container h4{
+    opacity: 0.6;
+}
+
+.invitation-card{
+    position: relative;
+    height: 70%;
+    width: 60%;
+    background-color:rgba(217, 217, 217, 0.3);
+    border-radius: 1rem;
+    background-image: url('/assets/cc-card.jpg');
+    background-size: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close-btn{
+    font-size: 2rem;          
+    color:rgba(217, 217, 217, 0.9);
+    background-color: transparent; 
+    border-radius: 1rem;   
+    cursor: pointer;          
+    transition: background-color 0.3s ease, color 0.3s ease; 
+    border: none;
+    position: absolute;         
+    top: 5px;                   
+    right: 10px; 
+}
+
+.close-btn:hover{
+    background-color: rgba(0, 0, 0, 0.1); 
+    color: white;                           
+}
+
+.accept-btn{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;                   
+    transform: translateX(-50%);
+}
