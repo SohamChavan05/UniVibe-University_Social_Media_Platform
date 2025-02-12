@@ -12,7 +12,8 @@ const Search = ()=>{
             <div className="search-bar w-full h-[80px] bg-[rgba(252,252,253,1)] flex flex-row items-center shadow-gray-300">
                 <div className='w-10 h-10 ml-[50px] bg-[#dfdff5] flex justify-center items-center rounded-[8px]'><img src="images/logo.svg" alt="Logo" className='w-6 h-6 ' /></div>
                 <h3 className='ml-[10px]'>Univibe</h3>
-                <div className="search bg-[rgba(244,245,248,255)] rounded-[8px] flex flex-row items-center ml-[800px]">
+                <div className='flex-1'></div>
+                <div className="search bg-[rgba(244,245,248,255)] rounded-[8px] flex flex-row items-center ">
                     <FontAwesomeIcon icon={faSearch} className='w-5 h-5 text-[rgba(172,182,196,255)] p-[6px]'/>
                     <input type="search" name="search" id="" placeholder="Search" className="placeholder:text-[rgba(172,182,196,255)] text-[rgb(32,69,85)] p-[6px] outline-none"/>
                 </div>
