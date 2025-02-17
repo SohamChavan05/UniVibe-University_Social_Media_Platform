@@ -1,14 +1,12 @@
-import InforPost from "./InforPost"
+import InforPost from "./InforPost";
 
+const MainPart = () => {
+  return (
+    <div className="rounded-[8px] mt-20 scrollbar-hide w-[50vw] ml-[25vw]">
+      <InforPost />
+      <InforPost />
+    </div>
+  );
+};
 
-
-const MainPart = ()=>{
-    return(
-        <><div className="w-[670px] bg-inherit mt-[25px] mx-[15px] rounded-[8px] p-[8px]">
-                <InforPost/>
-            </div>
-        </>
-    )
-}
-
-export default MainPart
+export default MainPart;
