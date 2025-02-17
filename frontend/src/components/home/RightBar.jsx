@@ -48,7 +48,7 @@ const RightBar = () => {
       </div>
 
       {/* Contacts Section */}
-      <div className="bg-gray-100 p-4 rounded-lg shadow-md w-[22rem]">
+      <div className="bg-white p-4 rounded-lg shadow-md w-[22rem]">
         <h2 className="text-gray-600 font-semibold text-lg border-b pb-2">
           Contacts
         </h2>
