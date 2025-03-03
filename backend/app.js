@@ -3,6 +3,9 @@ import mongoose from 'mongoose'
 import env from 'dotenv'
 import cors from 'cors'
 import bodyParser from 'body-parser'
+import loginRoute from './routes/loginRoutes.js'
+import communityRoute from './routes/communityRoutes.js'
+import postRoute from './routes/postRoutes.js'
 
 env.config()
 
@@ -20,6 +23,10 @@ mongoose.connect(process.env.URL)
     })
 
 const port = process.env.PORT || 8000
+
+app.use('/lr',loginRoute)
+app.use('/cm',communityRoute)
+app.use('/post',postRoute)
 
 app.listen(port,()=>{
     console.log(`Server is running on port http://localhost:${port}`)
