@@ -21,9 +21,14 @@ const userSchema = new mongoose.Schema({
         required:true
     },
     role:{
-        type:String,
-        required:true
-    }
+        type:String
+    },
+    joinedCommunity:[
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "Community"
+        }
+    ]
 })
 
 const model = mongoose.model("UniVibe_User",userSchema)

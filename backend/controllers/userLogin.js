@@ -31,19 +31,19 @@ const login = async(req,res)=>{
         const user = await User.findOne({enrollment})
         
         if (!user) return res.status(404).json({message:"User not found"})
-
+            
         const isMatch = await bcrypt.compare(password,user.password)
-
+        
         if (!isMatch) return res.status(401).json({message:"Password incorrect"})
             
         const token = jwt.sign({id:user._id},process.env.JWT_SECRET_KEY,{expiresIn:process.env.JWT_EXPIRES_IN || "1h"})
-
+        
         user.token = token
         await user.save()
         res.status(200).json({message:"User login successfully",details:user})
 
     }catch(err){
-        res.status(501).json({message:"Internal server error",error:err.message})
+        res.status(501).json({message:"Internal server error2",error:err.message})
     }
 }
 
