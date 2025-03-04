@@ -8,7 +8,7 @@ const auth = async(req,res,next)=>{
             
         const tokenPart = token.split(" ")[1];
         if (!tokenPart) return res.status(401).json({error:"Invalid token format"})
-                
+        
         const verified = jwt.verify(tokenPart,process.env.JWT_SECRET_KEY);
         const user = await User.findById(verified.id);
         if (!user || user.token!=tokenPart){
