@@ -11,6 +11,10 @@ const RightBar = () => {
     { img: "images/shrawan-profile.png", name: "Shrawan Kumar" },
   ]);
 
+  const acceptRequest = ()=>{
+
+  }
+
   return (
     <div className="fixed right-0 top-0 h-[100vh] w-[25vw] shadow-lg rounded-lg p-4">
       {/* Requests Section */}
@@ -35,10 +39,10 @@ const RightBar = () => {
                 </span>
               </div>
               <div className="flex space-x-2">
-                <button className="bg-[#2073d1] text-white text-xs px-3 py-1 rounded-md">
+                <button className="bg-[#2073d1] text-white text-xs px-3 py-1 rounded-md cursor-pointer" onClick={()=>acceptRequest}>
                   Accept
                 </button>
-                <button className="bg-[#ffff] text-black text-xs px-3 py-1 rounded-md">
+                <button className="bg-[#ffff] text-black text-xs px-3 py-1 rounded-md cursor-pointer">
                   Decline
                 </button>
               </div>

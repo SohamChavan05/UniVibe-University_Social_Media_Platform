@@ -28,6 +28,18 @@ const userSchema = new mongoose.Schema({
             type: mongoose.Schema.Types.ObjectId,
             ref: "Community"
         }
+    ],
+    requests:[
+        {
+            type:mongoose.Schema.Types.ObjectId,
+            ref:"UniVibe_User"
+        }
+    ],
+    contacts:[
+        {
+            type:mongoose.Schema.Types.ObjectId,
+            ref:"UniVibe_User"
+        }
     ]
 })
 
