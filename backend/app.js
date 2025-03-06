@@ -6,6 +6,7 @@ import bodyParser from 'body-parser'
 import loginRoute from './routes/loginRoutes.js'
 import communityRoute from './routes/communityRoutes.js'
 import postRoute from './routes/postRoutes.js'
+import userRoute from './routes/userRoutes.js'
 import {Server} from 'socket.io'
 import {createServer} from 'http'
 import { addPost } from './controllers/postController.js'
@@ -71,6 +72,7 @@ const port = process.env.PORT || 8000
 app.use('/lr',loginRoute)
 app.use('/cm',communityRoute)
 app.use('/post',postRoute)
+app.use('/u',userRoute)
 
 server.listen(port,()=>{
     console.log(`Server is running on port http://localhost:${port}`)
