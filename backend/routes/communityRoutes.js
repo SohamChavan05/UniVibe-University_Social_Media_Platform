@@ -6,6 +6,6 @@ const router = express.Router()
 
 router.post('/createCommunity',auth,createCommunity)
 router.post('/addMember',auth,addMember)
-router.post('/getAllCommunity',auth,getAllCommunity)
+router.get('/getAllCommunity',auth,getAllCommunity)
 
 export default router
