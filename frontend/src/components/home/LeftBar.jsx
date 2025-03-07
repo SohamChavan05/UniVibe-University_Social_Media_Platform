@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { NavLink } from "react-router-dom";
 
-const LeftBar = () => {
+const LeftBar = ({loginLogout,setLogoinLogout}) => {
   const [name, setName] = useState("Name");
   const [userName, setUserName] = useState("Enrollment");
   const [userProfilePicture, setUserProfilePicture] = useState(
@@ -20,11 +20,13 @@ const LeftBar = () => {
         setName(response.data.details.name)
         setUserName(response.data.details.enrollment)
       }catch(err){
+        setName("Name")
+        setUserName("Enrollment")
         console.log(err.message)
       }
     }
     fetch()
-  },[])
+  },[loginLogout])
 
   return (
     <div className="fixed top-15 left-0 h-screen w-[25vw] flex flex-col items-end bg-white">
