@@ -1,8 +1,4 @@
-import { faImage, faUser } from "@fortawesome/free-regular-svg-icons";
-import { IoHomeOutline, IoSettingsOutline } from "react-icons/io5";
-import { TbUserSquare } from "react-icons/tb";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faXmark } from "@fortawesome/free-solid-svg-icons";
+
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { NavLink } from "react-router-dom";
@@ -36,9 +32,9 @@ const LeftBar = () => {
         {/* Profile Card */}
         <div className="h-[5.125rem] w-[16.8rem] bg-[rgba(252,252,253,1)] mt-[1.5625rem] rounded-[0.5rem] flex items-center p-[0.5rem] shadow-md transition-transform duration-500 hover:scale-103">
           <img
-            src={`${userProfilePicture}`}
+            src={"./images/Defprofile.webp"}
             alt="Profile image"
-            className="w-10 h-10 rounded-[0.5rem] ml-[0.625rem]"
+            className="w-10 h-10 rounded-[1rem] ml-[0.625rem]"
           />
           <div className="ml-[0.625rem]">
             <h3 className="text-[#18263a] font-bold text-[0.9375rem]">
@@ -48,40 +44,37 @@ const LeftBar = () => {
           </div>
         </div>
 
-        <div className="h-[20rem] w-[16.8rem] bg-[rgba(252,252,253,1)] mt-2 rounded-[0.5rem] flex flex-col items-center shadow-md">
+        <div className="h-[18rem] w-[16.8rem] bg-[rgba(252,252,253,1)] mt-2 rounded-[1rem] flex flex-col items-center shadow-md">
           <div className="p-[0.625rem] w-full">
             {[
               {
                 icon: (
-                  <IoHomeOutline className="text-[rgba(188,199,212,255)] text-2xl" />
+                <img src="./images/Home.png"></img>
                 ),
                 label: "Home",
               },
               {
                 icon: (
-                  <TbUserSquare className="text-[rgba(188,199,212,255)] text-2xl" />
+                  <img src="./images/Community.png"></img>
                 ),
                 label: "Community",
               },
               {
                 icon: (
-                  <FontAwesomeIcon
-                    icon={faUser}
-                    className="text-2xl text-[rgba(172,182,196,255)]"
-                  />
+                  <img src="./images/Profile.png"></img>
                 ),
                 label: "Profile",
               },
               {
                 icon: (
-                  <IoSettingsOutline className="text-[rgba(188,199,212,255)] text-2xl" />
+                  <img src="./images/Settings.png"></img>
                 ),
                 label: "Settings",
               },
             ].map((item, index) => (
               <NavLink key={index} to={item.label==='Home' ? '/':`/${item.label}`}>
               <div
-                className={`w-[14.3rem] h-[3.75rem] flex items-center justify-start px-4 transition-transform duration-500 rounded-md cursor-pointer hover:bg-blue-100 hover:scale-105 ${
+                className={`w-[14.3rem] h-[4rem] flex items-center justify-start px-4 transition-transform duration-500 rounded-md cursor-pointer hover:bg-[#f3f3f3] hover:scale-105 ${
                   index !== 4
                     ? ""
                     : ""
@@ -90,7 +83,7 @@ const LeftBar = () => {
                 <div className="w-[2.5rem] flex justify-center">
                   {item.icon}
                 </div>
-                <p className="text-[#18263a] font-bold text-[0.9375rem] ml-[0.5rem]">
+                <p className="text-back font-bold text-[0.9375rem] ml-[0.5rem]">
                   {item.label}
                 </p>
               </div>

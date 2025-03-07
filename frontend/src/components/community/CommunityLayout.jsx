@@ -22,6 +22,7 @@ const CommunityLayout = () => {
         const response = await axios.get("http://localhost:8000/cm/getAllCommunity", {
           headers: { Authorization: `Bearer ${token}` },
         });
+        console.log(response.data.details.joinedCommunity)
         setCommunities(response.data.details.joinedCommunity);
       } catch (error) {
         console.error("Error fetching communities:", error);

@@ -29,7 +29,7 @@ function App() {
     <Router>
       <Routes>
         {/* Protected Routes */}
-        <Route path="/" element={<ProtectedRoute><Home /></ProtectedRoute>} />
+        <Route path="/" element={<Home />} />
         <Route path="/community" element={<ProtectedRoute><CommunityLayout /></ProtectedRoute>}>
           <Route path=":communityName" element={<ProtectedRoute><PostList /></ProtectedRoute>} />
         </Route>

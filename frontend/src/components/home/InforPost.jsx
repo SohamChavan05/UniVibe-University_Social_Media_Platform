@@ -5,9 +5,9 @@ const InforPost = ({name,caption,image,enrollment}) => {
         {/* User Info */}
         <div className="flex items-center mb-[0.75rem]">
           <img
-            src={`images/profile-image.jpg`}
+            src={`images/Defprofile.webp`}
             alt="Profile"
-            className="w-10 h-10 rounded-full ml-0.75"
+            className="w-10 h-10 rounded-full ml-0.75 border-2 border-white"
           />
           <div className="ml-0.75">
             <p className="text-[#18263a] font-bold text-[0.9375rem]">

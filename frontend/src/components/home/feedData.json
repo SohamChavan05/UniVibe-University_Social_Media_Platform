@@ -1,26 +1,26 @@
 [
-    {
-        "name":"Soham Chavan",
-        "enrollment":"2203051050553",
-        "feedImage":"/feed/first.png",
-        "caption":"Thrilled to share that I’ve completed the MERN Full Stack Development course from Apna College! 🚀 This journey from mastering MongoDB, Express, React, and Node.js to building projects like RentEase (a rental platform) and a weather app has been an incredible learning experience. Excited for what’s next in this ever-evolving world of web development! hashtag#MERNStack hashtag#WebDevelopment hashtag#React hashtag#NodeJS hashtag#LearningNeverStops"
-    },
-    {
-        "name":"Soham Chavan",
-        "enrollment":"2203051050553",
-        "feedImage":"/feed/first.png",
-        "caption":"Thrilled to share that I’ve completed the MERN Full Stack Development course from Apna College! 🚀 This journey from mastering MongoDB, Express, React, and Node.js to building projects like RentEase (a rental platform) and a weather app has been an incredible learning experience. Excited for what’s next in this ever-evolving world of web development! hashtag#MERNStack hashtag#WebDevelopment hashtag#React hashtag#NodeJS hashtag#LearningNeverStops"
-    },
-    {
-        "name":"Soham Chavan",
-        "enrollment":"2203051050553",
-        "feedImage":"/feed/first.png",
-        "caption":"Thrilled to share that I’ve completed the MERN Full Stack Development course from Apna College! 🚀 This journey from mastering MongoDB, Express, React, and Node.js to building projects like RentEase (a rental platform) and a weather app has been an incredible learning experience. Excited for what’s next in this ever-evolving world of web development! hashtag#MERNStack hashtag#WebDevelopment hashtag#React hashtag#NodeJS hashtag#LearningNeverStops"
-    },
-    {
-        "name":"Soham Chavan",
-        "enrollment":"2203051050553",
-        "feedImage":"/feed/first.png",
-        "caption":"Thrilled to share that I’ve completed the MERN Full Stack Development course from Apna College! 🚀 This journey from mastering MongoDB, Express, React, and Node.js to building projects like RentEase (a rental platform) and a weather app has been an incredible learning experience. Excited for what’s next in this ever-evolving world of web development! hashtag#MERNStack hashtag#WebDevelopment hashtag#React hashtag#NodeJS hashtag#LearningNeverStops"
-    }
+  {
+    "name": "Soham Chavan",
+    "enrollment": "2203051050553",
+    "feedImage": "/feed/post1.png",
+    "caption": "Thrilled to share that I’ve completed the MERN Full Stack Development course from Apna College! 🚀 This journey from mastering MongoDB, Express, React, and Node.js to building projects like RentEase (a rental platform) and a weather app has been an incredible learning experience. Excited for what’s next in this ever-evolving world of web development! hashtag#MERNStack hashtag#WebDevelopment hashtag#React hashtag#NodeJS hashtag#LearningNeverStops"
+  },
+  {
+    "name": "Vivek Tiwari",
+    "enrollment": "2203051050337",
+    "feedImage": "/feed/post2.png",
+    "caption": "Excited to present Grocefy, our project for the PU Hackathon! 🚀 Grocefy is designed to revolutionize grocery shopping with a user-friendly platform that connects consumers to local stores, offers smart shopping lists, and provides real-time inventory updates."
+  },
+  {
+    "name": "Shrawan Kumar",
+    "enrollment": "2203051050542",
+    "feedImage": "/feed/post3.jpeg",
+    "caption": "🚀 Excited to share my Full Stack project! 🚀 I’ve built a Integer to Roman & Roman to Integer Converter 🔢➡️🏛️ using Flask (Backend) & React (Frontend). This project efficiently converts numbers to Roman numerals and vice versa, ensuring accurate representation and handling edge cases."
+  },
+  {
+    "name": "Nikhil Kumar",
+    "enrollment": "2203051050435",
+    "feedImage": "/feed/post4.jpeg",
+    "caption": "Exciting Experience at Tech Expo 2025! 🚀I had an amazing time participating in Tech Expo 2025, where innovation and technology took center stage! From exploring groundbreaking advancements to networking with brilliant minds in the industry, the event was truly inspiring.A huge shoutout to the organizers, speakers, and fellow attendees who made this an unforgettable experience. Looking forward to applying these insights and collaborating on future tech innovations!"
+  }
 ]
