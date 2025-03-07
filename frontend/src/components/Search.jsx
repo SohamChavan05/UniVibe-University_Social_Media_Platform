@@ -6,22 +6,12 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
-<<<<<<< HEAD
-const Search = ({loginLogout,setLoginLogout}) => {
-  const navigate = useNavigate()
-  useEffect(()=>{
-    if (localStorage.getItem('token')){
-      console.log(localStorage.getItem('token'))
-      console.log(localStorage.getItem('userId'))
-      setLoginLogout(false)
-=======
 const Search = ({ loginLogout, setLoginLogout }) => {
   const navigate = useNavigate();
 
   useEffect(() => {
     if (localStorage.getItem("token")) {
       setLoginLogout(false);
->>>>>>> sk
     }
   }, []);
 
@@ -46,17 +36,10 @@ const Search = ({ loginLogout, setLoginLogout }) => {
         console.log("Logout unsuccessful");
       }
     } catch (error) {
-<<<<<<< HEAD
-        localStorage.removeItem("token"); // ✅ Clear token after successful logout
-        localStorage.removeItem("userId");
-        setLoginLogout(true)
-        console.error("Logout failed:", error.response?.data || error.message);
-=======
       setLoginLogout(true);
       localStorage.removeItem("token");
       localStorage.removeItem("userId");
       console.error("Logout failed:", error.response?.data || error.message);
->>>>>>> sk
     }
   };
 
