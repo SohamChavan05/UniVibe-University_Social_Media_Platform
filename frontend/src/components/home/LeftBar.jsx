@@ -3,11 +3,11 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { NavLink } from "react-router-dom";
 
-const LeftBar = () => {
+const LeftBar = ({loginLogout,setLoginLogout}) => {
   const [name, setName] = useState("Name");
   const [userName, setUserName] = useState("Enrollment");
   const [userProfilePicture, setUserProfilePicture] = useState(
-    "images/profile-image.jpg"
+    "/images/logo.png"
   );
   const token = localStorage.getItem('token')
 
@@ -19,12 +19,16 @@ const LeftBar = () => {
         )
         setName(response.data.details.name)
         setUserName(response.data.details.enrollment)
+        setUserProfilePicture(response.data.details.imageUrl)
       }catch(err){
+        setName("Name")
+        setUserName("Enrollment")
+        setUserProfilePicture("/images/logo.png")
         console.log(err.message)
       }
     }
     fetch()
-  },[])
+  },[loginLogout])
 
   return (
     <div className="fixed top-15 left-0 h-screen w-[25vw] flex flex-col items-end bg-white">
@@ -32,9 +36,9 @@ const LeftBar = () => {
         {/* Profile Card */}
         <div className="h-[5.125rem] w-[16.8rem] bg-[rgba(252,252,253,1)] mt-[1.5625rem] rounded-[0.5rem] flex items-center p-[0.5rem] shadow-md transition-transform duration-500 hover:scale-103">
           <img
-            src={"./images/Defprofile.webp"}
+            src={`http://localhost:8000${userProfilePicture}`}
             alt="Profile image"
-            className="w-10 h-10 rounded-[1rem] ml-[0.625rem]"
+            className="w-10 h-10 rounded-[1rem] ml-[0.625rem] object-cover"
           />
           <div className="ml-[0.625rem]">
             <h3 className="text-[#18263a] font-bold text-[0.9375rem]">

@@ -40,7 +40,13 @@ const userSchema = new mongoose.Schema({
             type:mongoose.Schema.Types.ObjectId,
             ref:"UniVibe_User"
         }
-    ]
+    ],
+    bio:{
+        type:String
+    },
+    imageUrl:{
+        type:String
+    }
 })
 
 const model = mongoose.model("UniVibe_User",userSchema)

@@ -6,6 +6,8 @@ import CommunityLayout from "./components/community/CommunityLayout";
 import PostList from "./components/community/PostList";
 import "./App.css";
 import PropTypes from "prop-types";
+import UserProfile from "./components/profile/Profile";
+import Create from "./components/Create";
 
 // Simulate auth check
 const isAuthenticated = () => {
@@ -30,12 +32,13 @@ function App() {
       <Routes>
         {/* Protected Routes */}
         <Route path="/" element={<Home />} />
+        <Route path="/create" element={<Create/>}/>
         <Route path="/community" element={<ProtectedRoute><CommunityLayout /></ProtectedRoute>}>
           <Route path=":communityName" element={<ProtectedRoute><PostList /></ProtectedRoute>} />
         </Route>
         <Route path="/community/:name" element={<ProtectedRoute><PostList/></ProtectedRoute>}/>
         <Route path="/logout" element={<ProtectedRoute><Logout /></ProtectedRoute>} />
-
+        <Route path="/Profile" element={<ProtectedRoute><UserProfile/></ProtectedRoute>}></Route>
         {/* Auth Routes */}
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
