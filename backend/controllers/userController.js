@@ -20,4 +20,26 @@ const acceptRequest = async(req,res)=>{
     }
 }
 
-export {getUser}
+
+const updateUser = async (req, res) => {
+    try {
+        const { name, bio } = req.body;
+
+        const updatedUser = await User.findByIdAndUpdate(
+            req.user.id, 
+            { name, bio }, 
+            { new: true }  // Return the updated user
+        );
+
+        if (!updatedUser) {
+            return res.status(404).json({ message: "User not found" });
+        }
+
+        res.status(200).json({ details: updatedUser, message: "User data saved successfully" });
+    } catch (err) {
+        res.status(500).json({ error: err.message, message: "Internal Server Error" });
+    }
+};
+
+
+export {getUser,updateUser}

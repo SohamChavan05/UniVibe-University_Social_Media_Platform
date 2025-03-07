@@ -1,13 +1,16 @@
-const InforPost = ({name,caption,image,enrollment}) => {
+import { useEffect } from "react";
+
+const InforPost = ({name,caption,profilePic,enrollment,feedImage}) => {
+
   return (
     <div className="items-center justify-center flex mt-2 mb-10">
       <div className="w-[85%] bg-[rgba(252,252,253,1)] p-[0.625rem] rounded-lg shadow-md">
         {/* User Info */}
         <div className="flex items-center mb-[0.75rem]">
           <img
-            src={`images/Defprofile.webp`}
+            src={`http://localhost:8000${profilePic}`}
             alt="Profile"
-            className="w-10 h-10 rounded-full ml-0.75 border-2 border-white"
+            className="w-10 h-10 rounded-full ml-0.75 border-2 border-white object-cover"
           />
           <div className="ml-0.75">
             <p className="text-[#18263a] font-bold text-[0.9375rem]">
@@ -22,9 +25,9 @@ const InforPost = ({name,caption,image,enrollment}) => {
         {/* Post Image */}
         <div className="mb-[0.75rem]">
           <img
-            src={`${image}`}
+            src={`http://localhost:8000${feedImage}`}
             alt="Post"
-            className="w-full h-[40rem] rounded-lg object-cover"
+            className="w-full rounded-lg object-contain"
           />
         </div>
 
