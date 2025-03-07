@@ -48,7 +48,8 @@ const addMember = async(req,res)=>{
 
 const getAllCommunity = async(req,res)=>{
     try{
-        const communities = await User.findOne(req.user._id).populate("joinedCommunity","name")
+        const communities = await User.findOne({_id:req.user.id}).populate("joinedCommunity","name")
+        console.log(req.user._id)
         return res.status(200).json({details:communities})
     }catch(err){
         res.status(501).json({error:err.message,message:"Internal Server Error"})
