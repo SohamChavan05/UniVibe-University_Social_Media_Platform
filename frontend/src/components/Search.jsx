@@ -4,6 +4,7 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const Search = () => {
   const navigate = useNavigate()
@@ -14,11 +15,31 @@ const Search = () => {
     }
   },[])
 
-  const handleLogout = () => {
-    localStorage.removeItem("token"); // Clear authentication token
-    setLoginLogout(true)
-    navigate("/"); // Redirect to login page
-  };
+  const handleLogout = async () => {
+    const token = localStorage.getItem("token");
+    const enrollment = localStorage.getItem("userId");
+
+    try {
+        const response = await axios.post(
+            `http://localhost:8000/lr/logout/${enrollment}`,
+            {}, // Empty request body
+            {
+                headers: { Authorization: `Bearer ${token}` }, // ✅ Corrected `headers`
+            }
+        );
+
+        if (response.status === 200) {
+            localStorage.removeItem("token"); // ✅ Clear token after successful logout
+            localStorage.removeItem("userId");
+            setLoginLogout(true)
+            // navigate("/login");
+        } else {
+            console.log("Logout unsuccessful");
+        }
+    } catch (error) {
+        console.error("Logout failed:", error.response?.data || error.message);
+    }
+};
 
   return (
     <>
