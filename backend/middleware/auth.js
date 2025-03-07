@@ -3,7 +3,7 @@ import User from '../models/User.js'
 
 const auth = async(req,res,next)=>{
     try{
-        const token = req.header("Authorization")
+        const token = req.headers.authorization
         if (!token) return res.status(401).json({error:"No Token Provided"})
             
         const tokenPart = token.split(" ")[1];

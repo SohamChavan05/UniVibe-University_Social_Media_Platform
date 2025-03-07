@@ -47,16 +47,21 @@ const login = async(req,res)=>{
     }
 }
 
-const logout = async(req,res)=>{
-    try{
-        const user = await User.findById(req.params.id)
-        if (!user) return res.status(404).json({msg:"User Not Found"})
-        user.token = ""
-        await user.save()
-        res.status(200).json({msg:"Logged out successfully"})
-    }catch(err){
-        res.status(500).json({error:err.message})
+const logout = async (req, res) => {
+    try {
+        const token = req.headers.authorization?.split(" ")[1]; // Extract token
+        if (!token) return res.status(401).json({ error: "No token provided" });
+
+        const user = await User.findOne({ enrollment: req.params.enrollment });
+        if (!user) return res.status(404).json({ message: "User Not Found" });
+
+        user.token = "";
+        await user.save();
+        res.status(200).json({ message: "Logged out successfully" });
+    } catch (err) {
+        res.status(500).json({ error: "Internal Server Error", details: err.message });
     }
-}
+};
+
 
 export {register,login,getAllUser,logout}
