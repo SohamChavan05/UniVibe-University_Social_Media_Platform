@@ -3,11 +3,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { NavLink } from "react-router-dom";
 
-<<<<<<< HEAD
-const LeftBar = ({loginLogout,setLogoinLogout}) => {
-=======
 const LeftBar = ({loginLogout,setLoginLogout}) => {
->>>>>>> sk
   const [name, setName] = useState("Name");
   const [userName, setUserName] = useState("Enrollment");
   const [userProfilePicture, setUserProfilePicture] = useState(
@@ -27,10 +23,7 @@ const LeftBar = ({loginLogout,setLoginLogout}) => {
       }catch(err){
         setName("Name")
         setUserName("Enrollment")
-<<<<<<< HEAD
-=======
         setUserProfilePicture("/images/logo.png")
->>>>>>> sk
         console.log(err.message)
       }
     }
