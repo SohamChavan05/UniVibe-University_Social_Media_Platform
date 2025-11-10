@@ -46,14 +46,31 @@ const addMember = async(req,res)=>{
     }
 }
 
-const getAllCommunity = async(req,res)=>{
-    try{
-        const communities = await User.findOne({_id:req.user.id}).populate("joinedCommunity","name")
-        console.log(req.user._id)
-        return res.status(200).json({details:communities})
-    }catch(err){
-        res.status(501).json({error:err.message,message:"Internal Server Error"})
+const getAllCommunity = async (req, res) => {
+    try {
+        const communities = await User.findOne({ _id: req.user.id })
+            .populate({
+                path: "joinedCommunity",
+                select: "name createdBy",
+                populate: {
+                    path: "createdBy",
+                    model: "UniVibe_User",
+                    select: "name enrollment"
+                }
+            })
+            .lean(); 
+
+        // Add an "isCreator" field to indicate if the current user is the creator
+        const modifiedCommunities = communities?.joinedCommunity?.map(community => ({
+            ...community,
+            isCreator: community.createdBy?._id.toString() === req.user.id.toString() // Check if the current user is the creator
+        })) || [];
+
+        return res.status(200).json({ details: modifiedCommunities });
+    } catch (err) {
+        res.status(500).json({ error: err.message, message: "Internal Server Error" });
     }
-}
+};
+
 
 export {createCommunity,addMember,getAllCommunity}
